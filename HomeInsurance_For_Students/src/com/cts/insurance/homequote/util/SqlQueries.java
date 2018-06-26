@@ -36,8 +36,8 @@ public final class SqlQueries {
 	public static final String GET_PROPERTY = "select * from Property where QUOTE_ID = ?";
 	public static final String GET_QUOTE = "select * from Quote where QUOTE_ID = ?";
 	
-	public static final String GET_LOCS_FOR_USER = "select * from Locations where USER_NAME = ?";
-	public static final String GET_ALL_DETAILS = "select * from Locations l, HomeownerInfo h, Propertys p, Quote q " +
+	public static final String GET_LOCS_FOR_USER = "select * from Locations where USERNAME = ?";
+	public static final String GET_ALL_DETAILS = "select * from Locations l, HomeownerInfo h, Property p, Quote q " +
 			"where l.QUOTE_ID = ? and h.QUOTE_ID = l.QUOTE_ID and p.QUOTE_ID = l.QUOTE_ID and q.QUOTE_ID = l.QUOTE_ID";
 	
 	public static final String SAVE_POLICY = "INSERT INTO Policies (POLICY_KEY, QUOTE_ID, POLICY_EFFECTIVE_DATE, " +

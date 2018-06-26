@@ -39,7 +39,7 @@ function submitPage(quoteId)
 			
 		</tr>
 		<%
-					List<Location> locationList = (List<Location>) request.getAttribute("locationList");
+					List<Location> locationList = (List<Location>)request.getAttribute("locationList");
 						if (locationList.size() > 0) {
 							for (Location loc : locationList) {
 		%>

@@ -56,6 +56,7 @@ public class QuoteSummaryServlet extends HttpServlet{
 				
 				final LocationBO locationBO = new LocationBO();
 				final List<Location> locationList = locationBO.getQuoteIds(userName);
+				
 				request.setAttribute("locationList", locationList);
 				forward = HomeInsuranceConstants.RETRIEVE_QUOTE;
 			}
