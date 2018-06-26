@@ -170,7 +170,7 @@ function noBack()
 		</tr>
 		<tr>
 			<td>Medical expense</td>
-			<td>$<jsp:getProperty name="quote" property="deductible" /></td>
+			<td>$<jsp:getProperty name="quote" property="medicalExpense" /></td>
 		</tr>
 		<tr>
 			<td>Deductible</td>

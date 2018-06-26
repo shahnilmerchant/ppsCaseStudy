@@ -62,9 +62,7 @@ public class QuoteSummaryServlet extends HttpServlet{
 			}
 			else
 			{
-//				final int quoteId = Integer.parseInt(request.getParameter("quoteIdSelected"));
-				final Quote quote = (Quote)session.getAttribute("quote");
-				final int quoteId = quote.getQuoteId();
+				final int quoteId = Integer.parseInt(request.getParameter("quoteIdSelected"));
 				session.setAttribute("quoteId", quoteId);
 				
 				final LocationBO locationBO = new LocationBO();
