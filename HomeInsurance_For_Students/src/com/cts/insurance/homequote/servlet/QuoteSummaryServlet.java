@@ -23,6 +23,7 @@ import com.cts.insurance.homequote.bo.HomeownerBO;
 import com.cts.insurance.homequote.bo.LocationBO;
 import com.cts.insurance.homequote.bo.PropertyBO;
 import com.cts.insurance.homequote.bo.QuoteBO;
+import com.cts.insurance.homequote.model.Homeowner;
 import com.cts.insurance.homequote.model.Location;
 import com.cts.insurance.homequote.model.Quote;
 import com.cts.insurance.homequote.util.HomeInsuranceConstants;
@@ -69,7 +70,9 @@ public class QuoteSummaryServlet extends HttpServlet{
 				request.setAttribute("location", locationBO.getHomeLocation(quoteId));
 				
 				final HomeownerBO homeownerBO = new HomeownerBO();
-				request.setAttribute("homeowner", homeownerBO.getHomeownerInfo(quoteId));
+				Homeowner homeowner = homeownerBO.getHomeownerInfo(quoteId);
+				homeowner.setDob(homeowner.getDob().substring(0, 10));
+				request.setAttribute("homeowner", homeowner);
 				
 				final PropertyBO propertyBO = new PropertyBO();
 				request.setAttribute("property", propertyBO.getProperty(quoteId));

@@ -95,7 +95,7 @@ function noBack()
 			<td><jsp:getProperty name="homeowner" property="dob" /></td>
 		</tr>
 		<tr>
-			<td>Is Retired ? - </td>
+			<td>Is Retired? </td>
 			<td><jsp:getProperty name="homeowner" property="isRetired" /></td>
 		</tr>
 		<tr>
@@ -142,7 +142,7 @@ function noBack()
 			<td><jsp:getProperty name="property" property="numHalfBaths" /></td>
 		</tr>
 		<tr>
-			<td>Has Swimming Pool? - </td>
+			<td>Has Swimming Pool? </td>
 			<td><jsp:getProperty name="property" property="hasSwimmingPool" /></td>
 		</tr>
 		<tr>
