@@ -17,7 +17,12 @@ function enableEsign()
 {
 	document.esign.esignature.disabled=false;
 }
-
+function validate()
+{
+	
+	
+	return true;
+}
 </script>
 </head>
 <body onload="noBack();" onunload="">
@@ -28,16 +33,16 @@ function enableEsign()
 	<div align="right"><a href="logout.jsp">Logout</a></div>
 	<p>Quote to Buy : <%=request.getParameter("quoteIdSelected")%></p>
 	<a href="terms.html" onclick="enableEsign()" target="_blank">Read terms and conditions before buying policy</a><br/><br/>
-	<form name="esign" action="policy" method="post">
+	<form name="esign" action="policy" method="post" onsubmit="return(validate());">
 	<%
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	    String todaysDate = sdf.format(Calendar.getInstance().getTime());
 	%>
-	Enter Policy Start Date: <input type="text" name="policyEffDate" value =" <%=todaysDate%>"/>(yyyy-MM-dd)
+	Enter Policy Start Date: <input type="text" name="policyEffDate" value ="<%=todaysDate%>"/>(yyyy-MM-dd)
 	<br/>
 	<h6>Policy start date cannot be more than 60 days from today's date</h6>
 	<br/>
-	<input type="checkbox" name="esignature" value="Esign" disabled="disabled"/>This is to acknowledge that I have read the terms and conditions of the policy.
+	<input type="checkbox" name="esignature" id="esignature" value="Esign" disabled="disabled"/>This is to acknowledge that I have read the terms and conditions of the policy.
 	<br/><input type="submit" name="submit" value="Submit"/>
 	</form>
 	</div>

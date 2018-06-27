@@ -41,12 +41,12 @@ public final class SqlQueries {
 			"where l.QUOTE_ID = ? and h.QUOTE_ID = l.QUOTE_ID and p.QUOTE_ID = l.QUOTE_ID and q.QUOTE_ID = l.QUOTE_ID";
 	
 	public static final String SAVE_POLICY = "INSERT INTO Policies (POLICY_KEY, QUOTE_ID, POLICY_EFFECTIVE_DATE, " +
-			"POLICY_END_DATE, POLICY_TERM, POLICY_STATUS) VALUES (?, ?, ?, ?, ?, ?)";
+			"POLICY_END_DATE, POLICY_TERM, POLICY_STATUS) VALUES (?, ?, TO_DATE(?, 'yyyy-mm-dd'), TO_DATE(?, 'yyyy-mm-dd'), ?, ?)";
 	
 	public static final String GET_POLICIES = "SELECT * from Policies p, Locations l where p.QUOTE_ID= l.QUOTE_ID and l.USERNAME = ?";
 	public static final String GET_POLICY = "SELECT * from Policies where POLICY_KEY = ?";
 	public static final String RENEW_POLICY = "UPDATE Policies SET POLICY_TERM = POLICY_TERM + 1, POLICY_STATUS = 'RENEWED' where POLICY_KEY = ?";
-	public static final String CANCEL_POLICY = "UPDATE Policies SET POLICY_STATUS = 'CANCELLED', POLICY_END_DATE=? where POLICY_KEY = ?";
+	public static final String CANCEL_POLICY = "UPDATE Policies SET POLICY_STATUS = 'CANCELLED', POLICY_END_DATE=TO_DATE(?, 'yyyy-mm-dd') where POLICY_KEY = ?";
 	// PRIVATE //
 
 	  /**

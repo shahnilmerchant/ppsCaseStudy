@@ -51,10 +51,10 @@ public class PolicyDAO {
 				Policy policy = new Policy();
 				policy.setPolicyKey(resultSet.getString(1));
 				policy.setQuoteId(resultSet.getInt(2));
-				policy.setPolicyEffDate(resultSet.getString(3));
-				policy.setPolicyEndDate(resultSet.getString(4));
-				policy.setPolicyTerm(resultSet.getInt(5));
-				policy.setPolicyStatus(resultSet.getString(6));
+				policy.setPolicyEffDate(resultSet.getString(3).substring(0, 10));
+				policy.setPolicyEndDate(resultSet.getString(4).substring(0, 10));
+				policy.setPolicyTerm(resultSet.getInt(6));
+				policy.setPolicyStatus(resultSet.getString(5));
 				policyList.add(policy);
 			}
 		}
@@ -189,16 +189,18 @@ public class PolicyDAO {
 				policy.setQuoteId(resultSet.getInt(2));
 				policy.setPolicyEffDate(resultSet.getString(3));
 				policy.setPolicyEndDate(resultSet.getString(4));
-				policy.setPolicyTerm(resultSet.getInt(5));
-				policy.setPolicyStatus(resultSet.getString(6));
+				policy.setPolicyTerm(resultSet.getInt(6));
+				policy.setPolicyStatus(resultSet.getString(5));
 			}
 		}
 		catch (SQLException e)
 		{
+			e.printStackTrace();
 			throw new HomequoteSystemException(e.getMessage());
 		}
 		catch(Exception e)
 		{
+			e.printStackTrace();
 			throw new HomequoteSystemException(e.getMessage());
 		} 
 		finally

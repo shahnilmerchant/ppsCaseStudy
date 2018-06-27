@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Policy Details</title>
 <script type="text/javascript">
-window.history.forward();     
+window.history.forward();
 function noBack() 
 { 
 	window.history.forward();
@@ -73,7 +73,7 @@ function noBack()
 	</div>
 	<div align="center">
 	<h3>For Searching user:</h3>
-	<form action="logout.jsp">
+	<form action="searchUser.jsp">
 		<button class="primary" name="SearchUser" type="submit">Click here</button>
 	</form>
 	</div>
