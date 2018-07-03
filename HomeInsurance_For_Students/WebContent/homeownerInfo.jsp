@@ -61,17 +61,17 @@ function noBack()
 	<table>
 		<tr>
 			<td>First Name</td>
-			<td><input name="firstName" type="text" />
+			<td><input name="firstName" maxlength="30" type="text" />
 			</td><td></td>
 		</tr>
 		<tr>
 			<td>Last Name</td>
-			<td><input name="lastName" type="text" />
+			<td><input name="lastName" maxlength="30" type="text" />
 			</td><td></td>
 		</tr>
 		<tr>
 			<td>Date of Birth</td>
-			<td><input type="text" name="dob"/></td><td>(yyyy-mm-dd)
+			<td><input type="text" maxlength="10" name="dob"/></td><td>(yyyy-mm-dd)
 			</td>
 		</tr>
 		<tr>
@@ -83,12 +83,12 @@ function noBack()
 		</tr>
 		<tr>
 			<td>Social Security Number</td>
-			<td><input name="ssn" type="text" />
+			<td><input name="ssn" maxlength="9" type="text" />
 			</td><td></td>
 		</tr>
 		<tr>
 			<td>Email Address</td>
-			<td><input name="emailAddress" type="text" />
+			<td><input name="emailAddress" maxlength="50" type="text" />
 			</td><td></td>
 		</tr>
 		<tr>

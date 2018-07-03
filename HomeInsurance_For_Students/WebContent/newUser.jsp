@@ -53,15 +53,15 @@ function validate(user) {
 		<tr></tr>
 		<tr>
 			<td>Username :</td>
-			<td width="70%"><input value='<jsp:getProperty name="user" property="userName"/>' name="userName" value=""/></td>
+			<td width="70%"><input maxlength="19" value='<jsp:getProperty name="user" property="userName"/>' name="userName" value=""/></td>
 		</tr>
 		<tr>
 			<td>Password :</td>
-			<td width="70%"><input type="password" name="password" value='<jsp:getProperty name="user" property="password"/>' name="password" value=""/></td>
+			<td width="70%"><input maxlength="19" type="password" name="password" value='<jsp:getProperty name="user" property="password"/>' name="password" value=""/></td>
 		</tr>
 		<tr>
 			<td>Re-enter password</td>
-			<td width="70%"><input type="password" name="confirmPass" value='<jsp:getProperty name="user" property="password"/>' name="password" value=""/></td>
+			<td width="70%"><input maxlength="19" type="password" name="confirmPass" value='<jsp:getProperty name="user" property="password"/>' name="password" value=""/></td>
 		</tr>
 		<tr></tr>
 		<tr>
